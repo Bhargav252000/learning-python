@@ -1,0 +1,219 @@
+"""
+class bear:
+    quant = 200
+
+    def __init__(self, name, color):
+        self.name = name
+        self.color = color
+
+    def change_color(self,color):
+        print(".....")
+        self.color = color
+
+    def change_name(self,name):
+        self.name = name
+
+
+t = bear(input("Enter The Name:"),input("Enter The Color:"))
+print(t.name)
+print(t.color)
+
+t.change_color(input("Enter Changed Color:"))
+t.change_name(input("Enter Changed Name:"))
+print(t.color)
+print(t.name)
+........................
+"""
+
+"""
+..........................
+# function based
+#INHERITENCE
+class Student:        #BASE class
+
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def get_data(self,name,age):
+        self.name = name
+        self.age = age
+    def put_data(self):
+        print(self.name)
+        print(self.age)
+
+
+class ScienceStudent(Student):      #SUBCLASS/DERIVECLASS
+
+    def science(self):
+        print("This ia a science Method:")
+
+
+a = ScienceStudent("","")
+a.get_data(input("Enter the name:"),input("Enter the age:"))
+a.put_data()
+.....................
+"""
+
+"""
+.....................
+### Multilevel Inheritence
+
+class A:
+    def A_method(self):
+        print("This is a method from A")
+
+class B(A):
+    def B_method(self):
+        print("This is a method from B")
+
+class C(B):
+    def C_method(self):
+        print("This is a method from C")
+
+c = C()
+c.A_method()
+c.B_method()
+c.C_method()
+.....................
+"""
+"""
+### SETS###
+.....................
+num = {3, 3, 45, 2, 5, 5, 66}
+num2 = {1, 2, 4, 6, 7}
+
+print(num | num2)         #UNION of two sets
+print(num & num2)         #INTERSECTION of two sets
+print(num - num2)         #removes all the element present in num2 from num
+
+"""
+
+"""
+### Overloading 
+class Point:
+
+    def __init__(self,x,y):
+        self.x = x
+        self.y = y
+
+    def __add__(self, other):
+        x = self.x + other.x
+        y = self.y + other.y
+        return Point(x,y)
+
+    def __str__(self):
+        return "({0},{1})".format(self.x,self.y)
+
+
+t = Point(1,10)
+p = Point(4,6)
+print(t+p)
+
+"""
+"""
+### CODING CHALLENGE 12
+...........................
+class Computer:
+
+    def __init__(self,ram,memory,processor):
+        self.ram = ram
+        self.memory = memory
+        self.processor = processor
+
+    def getspecs(self):
+        print('Enter the details:')
+        self.ram = input('Enter RAM size:')
+        self.memory = input('Enter Memory:')
+        self.processor = input('Enter The processor:')
+
+    def displayspecs(self):
+        print('The Specs Are:')
+        print(self.ram+self.memory+self.processor)
+
+class Desktop(Computer):
+    def __init__(self,casecolor):
+        self.casecolor = casecolor
+
+    def get_CASE_COLOR(self):
+        self.casecolor = input('Enter the color of the case:')
+
+    def put_CASE_COLOR(self):
+        print('Case Color Is:'+self.casecolor)
+
+class Laptop(Computer):
+    def __init__(self,weight):
+        self.weight = weight
+
+    def get_WEIGHT(self):
+        self.weight = input('Enter the weight:')
+
+    def put_WEIGHT(self):
+        print('The weight is :'+self.weight)
+
+
+gar = Laptop('')
+gar.getspecs()
+gar.get_WEIGHT()
+gar.displayspecs()
+gar.put_WEIGHT()
+...........................
+"""
+"""
+class AddOrMultiply:
+
+    def __init__(self,a):
+        self.a = a
+
+    def __mul__(self, other):
+        a = self.a + other.a
+        return a
+
+num1 = AddOrMultiply(45)
+num2 = AddOrMultiply(23)
+
+print(num1*num2)
+
+"""
+
+"""
+#### Regular Expression 
+ 
+import re
+
+pattern = r"loves"
+
+if re.match(pattern,"gargilovesbhargav"):
+    print('Yes, Found')
+else:
+    print('NO')
+
+if re.search(pattern,"gargilovesbhargav"):
+    print('Yes, Found')
+else:
+    print('NO')
+
+print(re.findall(pattern,"gargilovesbhargavlovesloves"))
+
+"""
+"""
+### Find And Replace
+import re
+
+string = "Hey, Bhargav loves gargi and gargi also loves Bhargav:"
+pattern = r"Bhargav"
+
+print(re.sub(pattern,"GOLI",string ))
+
+"""
+
+
+
+
+
+
+
+
+
+
+
